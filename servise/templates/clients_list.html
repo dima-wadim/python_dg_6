@@ -17,7 +17,7 @@
                 {% if object.middle_name %}
                    <div class="card-text">ФИО: {{ object.surname }} {{ object.name }} {{ object.middle_name }}.</div>
                 {% else %}
-                   <div class="card-text">ФИ: {{ object.surname }} {{ object.name }}.</div>
+                   <div class="card-text">ФИО: {{ object.surname }} {{ object.name }}.</div>
                 {% endif %}
                 <a href="{% url 'service:delete_client' object.pk %}" type="button"
                    class="btn btn-lg btn-block btn-outline-danger mt-3">Удалить</a>
