@@ -39,7 +39,7 @@ class CreateMailingView(CreateView):
             return redirect(self.success_url)
 
         else:
-            return render(request, 'service/no_client.html')
+            return render(request, 'servise/no_client.html')
 
 
 @method_decorator(login_required(login_url='users:login'), name='dispatch')
