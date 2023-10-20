@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.views import PasswordResetDoneView
 from django.contrib.sites.shortcuts import get_current_site
@@ -26,7 +27,7 @@ class RegisterView(CreateView):
 class ResetView(FormView):
     model = User
     form_class = PasswordAltResetForm
-    email_template_name = 'users/reset_email.html'
+    email_template_name = 'users/users/reset_email.html'
     template_name = 'users/reset_password.html'
     success_url = reverse_lazy('users:done')
     token_generator = default_token_generator

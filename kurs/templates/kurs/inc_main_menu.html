@@ -16,11 +16,11 @@
         <a class="p-2 btn btn-outline-primary" href="/">Главная</a>
         {% if user.is_authenticated %}
             {% if not user.is_superuser %}
-               <a class="p-2 btn btn-outline-primary" href="{% url 'servise:create_mailing' %}">Создать рассылку</a>
-               <a class="p-2 btn btn-outline-primary" href="{% url 'servise:list_mailing' %}">Список рассылок</a>
-               <a class="p-2 btn btn-outline-primary" href="{% url 'servise:clients_list' %}">Список клиентов</a>
+               <a class="p-2 btn btn-outline-primary" href="{% url 'service:create_mailing' %}">Создать рассылку</a>
+               <a class="p-2 btn btn-outline-primary" href="{% url 'service:list_mailing' %}">Список рассылок</a>
+               <a class="p-2 btn btn-outline-primary" href="{% url 'service:clients_list' %}">Список клиентов</a>
             {% endif %}
-            <a class="p-2 btn btn-outline-primary" href="{% url 'servise:mailing_logs_list' %}">Отчеты</a>
+            <a class="p-2 btn btn-outline-primary" href="{% url 'service:mailing_logs_list' %}">Отчеты</a>
         {% endif %}
     </nav>
 </div>
